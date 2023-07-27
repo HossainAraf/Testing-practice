@@ -1,4 +1,4 @@
-const {stringLength, reverseString} = require('./index');
+const {stringLength, reverseString, capitalize} = require('./index');
 const {Calculator} = require('./calculator.js');
 
 test('Araf string length', () => {
@@ -34,4 +34,8 @@ test('divide numbers', () => {
   expect(() => CalculatorInstance.divide(10, 0)).toThrow('Division by zero is not allowed');
   expect(CalculatorInstance.divide(55, 5)).toBe(11);
 })
+})
+
+test('Each word starts with capital character', () => {
+  expect(capitalize('faruk')).toBe('Faruk');
 })

@@ -13,4 +13,9 @@ function reverseString(string) {
   return string.split('').reverse().join('');
 }
 
-module.exports = { stringLength, reverseString };
+// First character of a string will be capitalised
+function capitalize(string) {
+return string.charAt(0).toUpperCase().concat(string.slice(1));
+}
+
+module.exports = { stringLength, reverseString, capitalize};
